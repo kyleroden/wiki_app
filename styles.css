@@ -1,7 +1,19 @@
 #search_term {
   border: 2px solid cadetblue;
 }
-#holder {
+#results_container li {
+  height: 2.5em;
+  list-style: none;
+  background-color: grey;
+  margin-bottom: 1em;
+  padding: 7px;
+  width: 40%;
+}
+li a {
+  color: white;
+}
+li a:hover {
+  color: black;
 }
 .icon {
   position: absolute;
