@@ -9,7 +9,9 @@
   <title>wiki_app</title>
 
   <!-- Bootstrap -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <!--fontawesome-->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
   <!-- custom css -->
   <link href="styles.css" rel="stylesheet">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -26,22 +28,22 @@
       <div class="col-lg-12">
         <h1>Wikipedia Viewer</h1>
         <div id="search_div">
+          <!--<form>-->
           <input type="text" id="search_term" placeholder="search" autofocus="true">
-          <button id="search_button" onclick="run_search()">Search Wikipedia</button>
+          <span class="icon"><i class="fa fa-search"></span></i>
+          <!--</form>-->
         </div>
         <div id="holder">
         </div>
         <div id="results_container"></div>
       </div>
     </div>
-  </div>
-
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
-  <!--custom js-->
-  <script src="script.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!--custom js-->
+    <script src="script.js"></script>
 </body>
 
 </html>
