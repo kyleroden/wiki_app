@@ -25,23 +25,22 @@
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-12">
-        <div id="title_container">
-        <h1>Wikipedia Viewer</h1>
+  <div class="container-fluid" id="wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div id="title_container">
+        <h1>Wikipedia Viewer<span id="lang"></h1></span></div>
+      <div id="search_div">
+        <!--<form>-->
+        <input type="text" id="search_term" placeholder="search" autofocus="true">
+        <span class="icon"><i class="fa fa-search"></span></i>
+        <!--</form>-->
       </div>
-        <div id="search_div">
-          <!--<form>-->
-          <input type="text" id="search_term" placeholder="search" autofocus="true">
-          <span class="icon"><i class="fa fa-search"></span></i>
-          <!--</form>-->
-        </div>
-        <div id="holder">
-        </div>
-        <div id="results_container"></div>
+      <div id="holder" class="text-left">
       </div>
+      <div id="results_container" class="text-left"></div>
     </div>
+  </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

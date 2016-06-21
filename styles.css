@@ -13,7 +13,9 @@ h1 {
   justify-content: space-around;
   /*align-items: center;*/
 }
+
 /* search styles*/
+
 #search_div {
   display: flex;
   /*align-content: flex-end;
@@ -31,8 +33,15 @@ h1 {
   margin-left: -29px;
   margin-top: 1px;
 }
+#holder {
+  max-width: 80%;
+  margin: 0 auto;
+}
 #results_container {
-
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 #search_term {
   border: 2px solid cadetblue;
@@ -43,21 +52,20 @@ h1 {
   display: flex;
   align-items: flex-end;
 }
-#results_container > li {
-  height: 3.5em;
+#results_container> li> * {}
+#results_container> li {
+  height: 9.5em;
   list-style: none;
   background-color: #FFF8CC;
   margin-bottom: 1em;
   padding-left: 7px;
-  width: 100%;
+  width: 80%;
   border: 2px solid #B2AB7D;
-  align-items: center;
-  display: flex;
+  position: relative;
 }
-#results_container > li > a{
-
+#results_container> li> img {
+  width: 50px;
 }
-
 li {
   min-width: 600px;
 }
@@ -67,4 +75,9 @@ li a {
 }
 li a:hover {
   color: #066872;
+}
+li> img {
+  right: 1em;
+  top: 2em;
+  position: relative;
 }
