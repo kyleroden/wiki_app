@@ -23,7 +23,7 @@ h1 {
   justify-content: space-around;
   flex-direction: row;
 }
-.icon {
+#search_icon {
   position: absolute;
   background-color: cadetblue;
   padding: 6px;
@@ -33,6 +33,7 @@ h1 {
   margin-left: -29px;
   margin-top: 1px;
 }
+
 #holder {
   max-width: 80%;
   margin: 0 auto;
@@ -51,6 +52,14 @@ h1 {
   width: 50%;
   display: flex;
   align-items: flex-end;
+}
+#get_random_article {
+  margin: 1em 0;
+  display: flex;
+  justify-content: center;
+}
+#random_icon {
+  margin: 0 .3em;
 }
 #results_container> li> * {}
 #results_container> li {

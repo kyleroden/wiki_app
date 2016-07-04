@@ -14,7 +14,7 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
   <!-- custom css -->
   <link href="styles.css" rel="stylesheet">
-<!-- Muli font-->
+  <!-- Muli font-->
   <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,25 +26,34 @@
 
 <body>
   <div class="container-fluid" id="wrapper">
-  <div class="row">
-    <div class="col-lg-12">
-      <div id="title_container">
-        <h1>Wikipedia Viewer<span id="lang"></h1></span></div>
-      <div id="search_div">
-        <!--<form>-->
-        <input type="text" id="search_term" placeholder="search" autofocus="true">
-        <span class="icon"><i class="fa fa-search"></span></i>
-        <!--</form>-->
+    <div class="row">
+      <div class="col-lg-12">
+        <div id="title_container">
+          <h1>Wikipedia Viewer<span id="lang"></h1></span>
+        </div>
+        <div id="search_div">
+          <!--<form>-->
+          <input type="text" id="search_term" placeholder="search" autofocus="true">
+          <span id="search_icon"><i class="fa fa-search"></span></i>
+          <!--</form>-->
+        </div>
+        <!--random article-->
+        <div id="get_random_article">
+          <!--/random article-->
+          <a href="https://en.wikipedia.org/wiki/Special:Random">
+          <p class="text-center">Random Entry<i class="fa fa-random" id="random_icon"></i></p>
+
+        </a>
+        </div>
+        <div id="holder" class="text-left">
+        </div>
+        <div id="results_container" class="text-left"></div>
       </div>
-      <div id="holder" class="text-left">
-      </div>
-      <div id="results_container" class="text-left"></div>
     </div>
-  </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
     <!--custom js-->
     <script src="script.js"></script>
 </body>
