@@ -27,7 +27,7 @@ var run_search = function() {
           'action': 'query',
           'format': 'json',
           //'list' : 'search',
-          'exintro' : false,
+          'exintro' : true,
           'exlimit': 10,
           'exchars': 250,
           'explaintext': true,
@@ -38,7 +38,7 @@ var run_search = function() {
           'prop': 'extracts|pageimages',
           'piprop': 'thumbnail',
           'pilimit': 'max',
-          'pithumbsize': '64',
+          'pithumbsize': '130',
           //allows CORS request to succeed
 
           headers: {
@@ -65,7 +65,6 @@ var run_search = function() {
           $.each(results, function(index, value) {
                 console.log(value);
                 //make li and anchor items
-
                 var list_item = document.createElement('li');
                 var list_anchor = document.createElement('a');
                 var list_desc = document.createElement('p');
@@ -83,11 +82,15 @@ var run_search = function() {
                 // put in extract
             var breaker = document.createElement("br");
             list_item.appendChild(breaker);
-            list_item.appendChild(document.createTextNode(value.extract));
+            //list_item.appendChild(document.createTextNode(value.extract));
+            $(list_desc).text(value.extract);
+            //$(list_desc).addClass("lead");
+            list_item.appendChild(list_desc);
                   //put the thumbnail in the li
                   if (value.thumbnail) {
                     $(list_thumbnail).attr("src", value.thumbnail.source);
                     $(list_thumbnail).addClass("pull-right");
+                    $(list_thumbnail).addClass("img-thumbnail");
                     list_item.appendChild(list_thumbnail);
 
                   }

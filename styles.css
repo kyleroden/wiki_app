@@ -64,7 +64,12 @@ h1 {
   position: relative;
 }
 #results_container> li> img {
-  width: 50px;
+  width: 130px;
+  position: absolute;
+  top: .3em;
+}
+#results_container> li> p {
+  max-width: 85%;
 }
 li {
   min-width: 600px;
