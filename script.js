@@ -66,6 +66,19 @@ var run_search = function() {
                 console.log(value);
                 //make li and anchor items
                 var list_item = document.createElement('li');
+                //create the main row div, which contains the description div and the img div
+                var list_row = document.createElement('div');
+                $(list_row).addClass('row');
+                //list_item.appendChild('list_row');
+                //create the description div
+                var list_desc_div = document.createElement('div');
+                $(list_desc_div).addClass('col-lg-9');
+
+                //create the image div
+                var list_img_div = document.createElement('div');
+                $(list_img_div).addClass('col-lg-3');
+
+                //create anchor and description elements
                 var list_anchor = document.createElement('a');
                 var list_desc = document.createElement('p');
                 //make thumbnail image
@@ -76,24 +89,27 @@ var run_search = function() {
 
                 //create a text node with the title of that article
                 list_anchor.appendChild(document.createTextNode(value.title));
-                //put the anchor in the li
-                list_item.appendChild(list_anchor);
+                //put the anchor in the list description div
+                $(list_desc_div).append(list_anchor);
             //insert br element to make space between title and extract
                 // put in extract
             var breaker = document.createElement("br");
-            list_item.appendChild(breaker);
+            list_desc_div.appendChild(breaker);
             //list_item.appendChild(document.createTextNode(value.extract));
             $(list_desc).text(value.extract);
             //$(list_desc).addClass("lead");
-            list_item.appendChild(list_desc);
+            $(list_desc_div).append(list_desc);
                   //put the thumbnail in the li
                   if (value.thumbnail) {
                     $(list_thumbnail).attr("src", value.thumbnail.source);
-                    $(list_thumbnail).addClass("pull-right");
+                    //$(list_thumbnail).addClass("pull-right");
                     $(list_thumbnail).addClass("img-thumbnail");
-                    list_item.appendChild(list_thumbnail);
+                    list_img_div.appendChild(list_thumbnail);
 
                   }
+                  $(list_row).append(list_desc_div);
+                  $(list_row).append(list_img_div);
+                  $(list_item).append(list_row);
                   //put the finished li in the container
                   document.getElementById("results_container").appendChild(list_item);
                 });
