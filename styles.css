@@ -33,7 +33,9 @@ h1 {
   margin-left: -29px;
   margin-top: 1px;
 }
-
+#search_icon:hover {
+  background-color: rgba(95, 158, 160, 0.7);
+}
 #holder {
   max-width: 80%;
   margin: 0 auto;
@@ -80,9 +82,7 @@ h1 {
 #results_container> li> p {
   max-width: 85%;
 }
-li {
-  min-width: 600px;
-}
+
 li a {
   color: black;
   font-size: 1.2em;
@@ -95,3 +95,12 @@ li> img {
   top: 2em;
   position: relative;
 }
+
+/*media queries*/
+
+@media only screen and (min-device-width: 320px)
+              and (max-device-width: 568px) {
+                #results_container> li {
+                  width: 95%;
+                }
+              }

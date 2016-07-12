@@ -5,7 +5,7 @@ $(document).keypress(function(event) {
   }
 });
 //run search when user clicks search icon
-$(".icon").click(function() {
+$("#search_icon").click(function() {
   run_search();
 });
 //run search function
