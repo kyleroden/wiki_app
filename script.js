@@ -81,7 +81,8 @@ var run_search = function() {
 
                 // set the attribute of hrf on the anchor to be the link to the wikipedia article
                 $(list_anchor).attr("href", "http://en.wikipedia.org/?curid=" + value.pageid);
-
+                //ensure that wiki article opens in a new window
+                $(list_anchor).attr("target", "_blank");
                 //create a text node with the title of that article
                 list_anchor.appendChild(document.createTextNode(value.title));
                 //put the anchor in the list description div
