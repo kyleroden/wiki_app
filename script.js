@@ -12,10 +12,6 @@ $("#search_icon").click(function() {
 var run_search = function() {
     //gather the value of the user's input
     var user_search_term = $("#search_term").val();
-
-    //var prop_data = $.param({
-    //   prop: ['extracts','pageimages']
-    // }, true);
     //jquery to make ajax xmlhttprequest object
     $.ajax({
         type: 'GET',
@@ -26,7 +22,6 @@ var run_search = function() {
         data: {
           'action': 'query',
           'format': 'json',
-          //'list' : 'search',
           'exintro' : true,
           'exlimit': 10,
           'exchars': 250,
@@ -51,7 +46,6 @@ var run_search = function() {
         success: function(data) {
           //object with 10 pages of results matching search term
           var results = data.query.pages;
-          //var rresults = data.query.search;
           console.log("succeeded");
           //console.log(rresults);
 
@@ -66,17 +60,18 @@ var run_search = function() {
                 console.log(value);
                 //make li and anchor items
                 var list_item = document.createElement('li');
+
                 //create the main row div, which contains the description div and the img div
                 var list_row = document.createElement('div');
                 $(list_row).addClass('row');
-                //list_item.appendChild('list_row');
+
                 //create the description div
                 var list_desc_div = document.createElement('div');
-                $(list_desc_div).addClass('col-lg-9');
+                $(list_desc_div).addClass('col-lg-10');
 
                 //create the image div
                 var list_img_div = document.createElement('div');
-                $(list_img_div).addClass('col-lg-3');
+                $(list_img_div).addClass('col-lg-2');
 
                 //create anchor and description elements
                 var list_anchor = document.createElement('a');
@@ -92,12 +87,10 @@ var run_search = function() {
                 //put the anchor in the list description div
                 $(list_desc_div).append(list_anchor);
             //insert br element to make space between title and extract
-                // put in extract
             var breaker = document.createElement("br");
             list_desc_div.appendChild(breaker);
-            //list_item.appendChild(document.createTextNode(value.extract));
+            // put in extract
             $(list_desc).text(value.extract);
-            //$(list_desc).addClass("lead");
             $(list_desc_div).append(list_desc);
                   //put the thumbnail in the li
                   if (value.thumbnail) {
@@ -105,7 +98,6 @@ var run_search = function() {
                     //$(list_thumbnail).addClass("pull-right");
                     $(list_thumbnail).addClass("img-thumbnail");
                     list_img_div.appendChild(list_thumbnail);
-
                   }
                   $(list_row).append(list_desc_div);
                   $(list_row).append(list_img_div);
@@ -121,4 +113,4 @@ var run_search = function() {
     };
 
     //language selector
-    $("#lang").html("<small>" + " EN" + "</small>");
+    //$("#lang").html("<small>" + " EN" + "</small>");

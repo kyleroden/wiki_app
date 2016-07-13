@@ -13,6 +13,13 @@ h1 {
   justify-content: space-around;
   /*align-items: center;*/
 }
+#language_container {
+  display: flex;
+  justify-content: space-around;
+}
+#language_container > h5 {
+  margin-top: 0px;
+}
 
 /* search styles*/
 
@@ -82,7 +89,9 @@ h1 {
 #results_container> li> p {
   max-width: 85%;
 }
-
+#results_container > li:hover {
+  background-color: rgba(255, 248, 204, 0.6);
+}
 li a {
   color: black;
   font-size: 1.2em;
@@ -90,6 +99,7 @@ li a {
 li a:hover {
   color: #066872;
 }
+
 li> img {
   right: 1em;
   top: 2em;
