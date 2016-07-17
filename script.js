@@ -35,7 +35,6 @@ var run_search = function() {
           'pilimit': 'max',
           'pithumbsize': '130',
           //allows CORS request to succeed
-
           headers: {
             'Api-User-Agent': 'Example/1.0'
           },
@@ -47,7 +46,6 @@ var run_search = function() {
           //object with 10 pages of results matching search term
           var results = data.query.pages;
           console.log("succeeded");
-          //console.log(rresults);
 
           $("#holder").html("<h3>Results: " + user_search_term + "</h3>");
           //delete contents of previous search by checking to see if there is any text in div
@@ -79,7 +77,7 @@ var run_search = function() {
                 //make thumbnail image
                 var list_thumbnail = document.createElement('img');
 
-                // set the attribute of hrf on the anchor to be the link to the wikipedia article
+                // set the attribute of href on the anchor to be the link to the wikipedia article
                 $(list_anchor).attr("href", "http://en.wikipedia.org/?curid=" + value.pageid);
                 //ensure that wiki article opens in a new window
                 $(list_anchor).attr("target", "_blank");
@@ -96,7 +94,6 @@ var run_search = function() {
                   //put the thumbnail in the li
                   if (value.thumbnail) {
                     $(list_thumbnail).attr("src", value.thumbnail.source);
-                    //$(list_thumbnail).addClass("pull-right");
                     $(list_thumbnail).addClass("img-thumbnail");
                     list_img_div.appendChild(list_thumbnail);
                   }
@@ -112,6 +109,3 @@ var run_search = function() {
             }
         });
     };
-
-    //language selector
-    //$("#lang").html("<small>" + " EN" + "</small>");
