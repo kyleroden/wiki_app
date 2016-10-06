@@ -25,11 +25,10 @@ h1 {
 
 #search_div {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: row;
 }
 #search_icon {
-  position: absolute;
   background-color: cadetblue;
   padding: 6px;
   width: 2em;
